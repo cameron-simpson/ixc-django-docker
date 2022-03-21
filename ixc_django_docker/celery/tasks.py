@@ -1,11 +1,12 @@
 from __future__ import absolute_import
 
-from celery import app
 from django.core import management
 import decorator
 import redis_lock
 
 from ixc_django_docker.redis_lock import lock
+
+from .celery import app
 
 
 @decorator.decorator
